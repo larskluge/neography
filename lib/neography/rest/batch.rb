@@ -188,6 +188,14 @@ module Neography
         end
       end
 
+      # Labels
+
+      def add_label(id, label)
+        post build_node_uri(id) + "/labels" do
+          label
+        end
+      end
+
       # Cypher
 
       def execute_query(query, params = nil)
